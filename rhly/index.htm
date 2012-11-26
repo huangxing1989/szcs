@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <meta name="keywords" content="数字仁化,仁化旅游网" />
+        <meta name="description" content="仁化旅游信息、旅游景点、旅游资讯、吃住行游购娱" />
+        <link rel="Stylesheet" href="SDK/theme/default/style.css" />
+        <link rel="Stylesheet" href="SDK/theme/default/szcs.css" />
+        <link rel="Stylesheet" href="css/rhly.css" />
+        <link rel="Stylesheet" href="CSS/sty.css" />
+        <link rel="Stylesheet" href="CSS/jqueryui/jquery-ui-1.8.21.custom.css" />
+        <title>仁化旅游网</title>
+        <script type="text/javascript" src="JS/mSelect.js"></script>
+        <script type="text/javascript" src="JS/jquery-1.4.1.min.js"></script>
+        <script type="text/javascript" src="SDK/scroll.min.js"></script>
+	</head>
+    <body onload="init()">
+		<div id="header">
+			<div id="flashtitle">
+                <embed wmode="transparent" width="974" height="78" loop='true' src="IMG/title/banner.swf" style="z-index:1;"></embed>
+			</div>
+            <div id="logo"></div>
+		</div>
+		<div id="nav">
+		    <div id="weatherWater"></div>
+		    <div id="weatherFrame">
+		        <iframe src="http://m.weather.com.cn/m/pn7/weather.htm?id=101280206T" width="190" height="20" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+		    </div>
+		    <div id="toolBar">
+		        <img id="ti_01" src="" alt="图片" title="全图"/>
+		        <img id="ti_02" src="" alt="图片" title="平移地图"/>
+		        <img id="ti_03" src="" alt="图片" title="拉框放大"/>
+		        <img id="ti_04" src="" alt="图片" title="拉框缩小"/>
+		        <img id="ti_05" src="" alt="图片" title="测量距离"/>
+		        <img id="ti_06" src="" alt="图片" title="测量面积"/>
+		        <img id="ti_07" src="" alt="图片" title="截图"/>
+		        <img id="ti_08" src="" alt="图片" title="微博分享"/>
+		        <img id="ti_09" src="" alt="图片" title="自定义标注"/>
+		        <img style="clear:right;" id="ti_010" src="" alt="图片" title="地图打印"/>
+		    </div>
+            <select id="districtarea" mSty="blueCircle">
+                <option>请选择行政区</option>
+                <option>丹霞街道</option>
+                <option>闻韶镇</option>
+                <option>扶溪镇</option>
+                <option>长江镇</option>
+                <option>城口镇</option>
+                <option>红山镇</option>
+                <option>石塘镇</option>
+                <option>董塘镇</option>
+                <option>大桥镇</option>
+                <option>周田镇</option>
+                <option>城口镇</option>
+                <option>黄坑镇</option>
+            </select>
+		</div>
+		<script type="text/javascript">
+		    var mySelect = new mSelect('mySelect', 'CSS/mSelect.css');
+		    var aS = document.getElementById('districtarea');
+		    mySelect.Create(aS, 'blueCircle', true);
+		    (function(txt) {
+		        var contain = document.getElementById(txt);
+		        var imgs = contain.getElementsByTagName("img");
+		        for (var i = 0; i < imgs.length; i++) {
+
+		            imgs[i].src = "IMG/ui/nav/" + imgs[i].id + ".png";
+
+		        }
+		        var sel = document.getElementById("districtarea");
+		        sel.onchange = function() {
+		            var val = this.value.split(",");
+		            var ext = new NBounds(parseFloat(val[0]), parseFloat(val[1]), parseFloat(val[2]), parseFloat(val[3]));
+		            Global.map.zoomToExtent(ext);
+		        }
+
+		    })("toolBar");
+		</script>
+		<div id="mainbody">
+		    <div id="leftPanel">
+                <div id="controlBar">
+                    <img id="ctrl_01" src="" title="地名搜索" alt="图片" />
+                    <img id="ctrl_02" src="" title="驾车搜索" alt="图片"/>
+                    <img id="ctrl_03" src="" title="公交搜索" alt="图片"/>
+                    <img id="ctrl_04" src="" title="吃饭" alt="图片"/>
+                    <img id="ctrl_05" src="" title="住宿" alt="图片"/>
+                    <img id="ctrl_06" src="" title="旅游" alt="图片"/>
+                    <img id="ctrl_07" src="" title="购物" alt="图片"/>
+                    <img id="ctrl_08" src="" title="娱乐" alt="图片"/>
+                    <img id="ctrl_09" src="" title="专题" alt="图片"/>
+                </div>
+                <script type="text/javascript">
+                    function slideToXY(x,y) {
+                        x=x||0;
+                        y=y||0;
+                        jQuery("#panelCanvas").animate({
+                            left:x,
+                            top:y,
+                        },100);
+                    };
+                    (function() {
+                        var controlBar = document.getElementById("controlBar");
+                        var imgs = controlBar.getElementsByTagName("img");
+                        for (var i = 0; i < imgs.length; i++) {
+                            var id = imgs[i].id;
+                            imgs[i].src = "IMG/ui/ctrl/" + id + ".png";
+                            imgs[i].onmouseover = function() {
+                                this.src = "IMG/ui/ctrl/" + this.id + "a.png"; ;
+                            }
+                            imgs[i].onmouseout = function() {
+                                if(this.isActive){
+                                    return;
+                                }
+                                this.src = "IMG/ui/ctrl/" + this.id + ".png"; ;
+                            }
+                            imgs[i].onclick = function() {
+                                var left = 0;
+                                if(this.isActive){
+                                    left=0;
+                                    for(var i=0;i<imgs.length;i++){
+                                        imgs[i].isActive=false;
+                                        imgs[i].onmouseout();
+                                    }
+                                    slideToXY(0,0);
+                                }else{
+                                    switch (this.id) {
+                                        case "ctrl_01":
+                                            left = 240;
+                                            break;
+                                        case "ctrl_02":
+                                            left = 480;
+                                            break;
+                                        case "ctrl_03":
+                                            left = 720;
+                                            break;
+                                        case "ctrl_04":
+                                        case "ctrl_05":
+                                        case "ctrl_06":
+                                        case "ctrl_07":
+                                        case "ctrl_08":
+                                            left =960;
+                                            break;
+                                    }
+                                    for(var i=0;i<imgs.length;i++){
+                                        imgs[i].isActive=false;
+                                        imgs[i].onmouseout();
+                                    }
+                                    this.isActive=true;
+                                    this.onmouseover();
+                                    slideToXY(-left,0);
+                                }
+                            }
+                        }
+                    })();
+                </script>
+                <div id="panelContainer">
+                    <div id="panelCanvas">
+                        <div id="welcomePage">
+                            <div class="panelTitle"></div>
+                            <div class="panelBody">
+                                <img style="margin:0px 17px 10px;width:190px;height:140px;display:block;border:none;" src="IMG/ui/danxia.jpg" alt="图片" title="风景"/>
+                                <p style="width:180px;margin:12px 22px 0px;font-size:13px;text-indent:2;">
+                                仁化县位于广东省北部，
+                                是粤、湘、赣三省交接地，
+                                北邻湖南省汝城县，东接江西省崇义、大余县，
+                                南距韶关市区50公里。
+                                仁化县历史悠久。秦末汉初，
+                                南越王赵佗就在仁化北端隘口筑有“古秦城”；
+                                至南齐年间(公元479年至502年)，始建仁化县，距今约1500年。
+                                全县辖丹霞、仁化、董塘、石塘、扶溪、闻韶、长江、城口、红山、
+                                周田、黄坑、大桥12个镇，136个村（居）民委员会，总人口22.72万，
+                                总面积2204平方公里，县政府驻仁化镇。
+                                仁化是纯客住县，全境通行客家话</p>
+                            </div>
+                            <div class="panelFooter"></div>
+                        </div>
+                        <div id="poiSearchPage">
+                            <div id="poiSearchControl" style="width:200px;height:60px;display:block;margin:30px 10px 10px 30px;clear:both;">
+                                <div style="width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                <div style="border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                    <input id="keywordInput" type="text" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                </div>
+                                <div id="poiSearchBtn" style="width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right.png);"></div>
+                                <div id="hotwords" style="clear:both;width:200px;text-align:left;height:30px;text-align:center;line-height:30px;font-size:12px;color:#d8ad00;">
+                                </div>
+                            </div>
+                            <div id="poiSearchResult"></div>
+                        </div>
+                        <div id="routeSearchPage">
+                            <div id="routeSearchControl" style="clear:both;width:200px;height:65px;display:block;margin:30px 10px 10px 30px;">
+                                <div style="margin:0px 0px 5px 0px;width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                <div style="margin:0px 0px 5px 0px;border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                    <input id="" type="text" value="请输入起点" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                </div>
+                                <div style="margin:0px 0px 5px 0px;width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right2.png);"></div>
+                                <div style="width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                <div style="border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                    <input type="text" value="请输入终点" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                </div>
+                                <div id="routeSearchBtn" style="width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right.png);"></div>
+                            </div>
+                            <div id="routeSearchResult"></div>
+                        </div>
+                        <div id="busSearchPage">
+                            <div id="busSearchControl" style="width:200px;height:85px;display:block;margin:30px 10px 10px 30px;">
+                                <div id="busswitch">
+                                    <div style="margin:0px 0px 5px 0px;width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                    <div style="margin:0px 0px 5px 0px;border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                        <input type="text" value="请输入起点" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                    </div>
+                                    <div style="margin:0px 0px 5px 0px;width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right2.png);"></div>
+                                    <div style="width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                    <div style="border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                        <input type="text" value="请输入终点" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                    </div>
+                                    <div id="busSwitchBtn" style="width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right.png);"></div>
+                                </div>
+                                <div id="busline" style="display:none;">
+                                    <div style="margin:15px 0px 20px;width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                    <div style="margin:15px 0px 20px;border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                        <input type="text" value="输入线路名称" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                    </div>
+                                    <div id="busLineBtn" style="margin:15px 0px 20px;width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right.png);"></div>
+                                </div>
+                                <div id="busstation" style="display:none;">
+                                    <div style="margin:15px 0px 20px;width:15px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_left.png);"></div>
+                                    <div style="margin:15px 0px 20px;border:none;width:150px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_bg.png);background-repeat:repeat-x;">
+                                        <input type="text" value="输入站点名称" style="color:#666;border:none;width:140px;height:18px;margin:4px 0px;padding:2px 5px;background-color:Transparent;" />
+                                    </div>
+                                    <div id="busStationBtn" style="margin:15px 0px 20px;width:34px;height:30px;display:block;float:left;background-image:url(IMG/ui/menu/s_right.png);"></div>
+                                </div>
+                                <div id="switchControl" style="width:210px;height:20px;line-height:20px;font-size:12px;color:#d8ad00;">
+                                    <a style="text-decoration:none;color:#666;" href="javascript:void(0);">公交换乘</a>&nbsp;
+                                    <a style="text-decoration:none;color:#666;" href="javascript:void(0);">公交线路</a>&nbsp;
+                                    <a style="text-decoration:none;color:#666;" href="javascript:void(0);">公交站点</a>
+                                </div>
+                                <script type="text/javascript">
+                                    (function() {
+                                        var busswitch = document.getElementById("busswitch");
+                                        var busline = document.getElementById("busline");
+                                        var busstation = document.getElementById("busstation");
+                                        var anchors = document.getElementById("switchControl").getElementsByTagName("a");
+                                        var divs = [busswitch, busline, busstation];
+                                        for (var i = 0; i < anchors.length; i++) {
+                                            anchors[i].index = i;
+                                            anchors[i].onclick = function() {
+                                                for (var i = 0; i < divs.length; i++) {
+                                                    divs[i].style.display = "none";
+                                                }
+                                                divs[this.index].style.display = "block";
+                                            }
+                                        }
+                                    })();
+                                </script>
+                            </div>
+                            <div id="busSearchResult"></div>
+                        </div>
+                        <div id="classifySearchPage">e</div>
+                        <div id="modulePage">f</div>
+                    </div>
+                </div>
+		    </div>   
+		    <div id="rightPanel">
+		        <div id="newmap"></div>
+		    </div>
+		</div>
+        <script type="text/javascript">
+            (function() {
+                function resize() {
+                    var mainbody = document.getElementById("mainbody");
+                    var rightpanel = document.getElementById("rightPanel");
+                    var controlBar = document.getElementById("controlBar");
+                    var winH = (typeof window.innerHeight != 'undefined') ? window.innerHeight : document.documentElement.clientHeight;
+                    var winW = (typeof window.innerWidth != 'undefined') ? window.innerWidth : document.documentElement.clientWidth;
+                    controlBar.style.height = mainbody.style.height = (winH - 135) + "px";
+                    rightPanel.style.width = (winW - 310) + "px";
+                }
+                resize();
+                jQuery(window).resize(function() { resize(); Global.map.updateSize(); });
+            })();
+        </script>
+		
+		<div id="footer">
+            <span>
+                审图号：粤S（2011）095号、粤S（2011）018号、粤S（2012）074号&nbsp;&nbsp;    
+                地图服务支持：<a target="_blank" href="javascript:void(0);">韶关市国土资源局</a>&nbsp;&nbsp;     
+                技术支持：韶关市国土资源信息中心&nbsp;<a target="_blank" href="javascript:void(0);">广东省国土资源测绘院</a>            
+            </span>
+		</div>
+        
+        <script type="text/javascript" src="JS/jquery-ui-1.8.21.custom.min.js"></script>
+        <script type="text/javascript" src="JS/jquery.cookie.js"></script>
+        <script type="text/javascript" src="SDK/NewMapServerJsAPI.js"></script>
+        <script type="text/javascript" src="SDK/SZCSJsAPI.js"></script>
+        <script type="text/javascript" src="JS/common.js"></script>
+        <script type="text/javascript" src="JS/template.js"></script>
+        <script type="text/javascript" src="JS/main.js"></script>
+
+        
+		<div id="ImageExplorer">
+			<div class="background"></div>
+			<div id="ImgContainer"></div>
+			<div id="ImageClose" class="ImageClose" title="关闭"></div>
+			<div id="ImageManipulate">
+				<div id="ImagePrev" class="ImagePrev"></div>
+				<div id="ImageNext" class="ImageNext"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+		    var imgclose = document.getElementById("ImageClose");
+		    imgclose.onmouseover = function() {
+		        this.className = "ImageCloseActive";
+		    };
+		    imgclose.onmouseout = function() {
+		        this.className = "ImageClose";
+		    };
+		    imgclose.onclick = function() {
+		        document.getElementById("ImageExplorer").style.display = "none";
+		    }
+		</script>  
+		<script type="text/javascript">
+		    var _timer = setInterval(function() {
+		    if (typeof correct_pts != "undefined" && typeof correct_pts["heyuan"] != "undefined") {
+		            clearInterval(_timer);
+		            correct_pts = null;
+		            var sc = document.createElement("script");
+		            sc.type = "text/javascript";
+		            sc.src = "http://api.o.cn/extend/CoorConvert_NewMap.js";
+		            document.getElementsByTagName("head")[0].appendChild(sc);
+		            Global.debug ? console.log("加载都市圈控制点") : null;
+		        }
+		    }, 200);
+		</script>    
+    </body>
+    <script type="text/html" id="tmpl-label-parameter">
+        <div class="tmpl-label-parameter-container">
+            <input type="text" class="tmpl-label-parameter-input-title" id="<%=params["titleid"] %>" value="<%=params["title"] %>" />
+            <textarea class="tmpl-label-parameter-input-content" id="<%=params["contid"] %>"><%=params["content"] %></textarea>
+            <input type="button" value="确定" class="tmpl-label-parameter-button-sure" id="<%=params["sureid"] %>" />
+            <input type="button" value="取消" class="tmpl-label-parameter-button-cancel" id="<%=params["cancelid"] %>" />
+        </div>
+    </script>
+    <script type="text/html" id="tmpl-label-panel">
+        <div class="tmpl-label-display-container">
+            <div class="tmpl-label-display-title"><%=params["title"] %></div>
+            <div class="tmpl-label-display-content"><%=params["content"] %></div>
+        </div>
+    </script>
+</html>

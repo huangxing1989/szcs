@@ -1,0 +1,1524 @@
+﻿
+
+.map2dDisplay
+{
+	width:100%;
+	height:100%;
+	display:block;
+}
+.map2dHide
+{
+	display:none;
+}
+
+.map3dDisplay
+{
+	width:100%;
+	height:100%;
+	display:block;
+}
+.map3dHide
+{
+	width:0px;
+	height:0px;
+	display:block;
+}
+.map3dInit
+{
+	width:0px;
+	height:0px;
+	display:block;
+}
+
+
+
+
+.LabelReturnDiv
+{
+    width:295px;
+    height:32px;
+    display:block;
+    clear:both;
+    text-align:left;
+    background-color:#fff;
+    cursor:default;
+}
+
+.LabelReturnDiv span
+{
+    display:block;
+    height:100%;
+    line-height:32px;
+    width:200px;
+    margin:0px 65px 0px 30px;
+    font-size:12px;
+    text-align:left;
+    background-color:Transparent;
+       
+}
+
+.LabelContentListItem
+{
+    width:295px;
+    height:60px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+}
+
+.LabelContentListItemActive
+{
+    width:295px;
+    height:60px;
+    background-color:#E5EEFF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+}
+
+.LabelContentListMgr
+{
+    display:block;
+    width:70px;
+    text-align:right;
+    font-size:12px;
+    padding:5px 0px 0px 0px;
+    color:#000;
+    float:left;
+    clear:right;
+}
+.LabelContentListMgr a
+{
+    text-decoration:none;
+    color:#555; 
+    margin:0px 4px;  
+}
+.LabelContentListIMG
+{
+    width:28px;
+    height:43px;
+    display:block;
+    border:none;
+    float:left;
+    margin:9px 2px 8px 10px;
+}
+.LabelContent
+{
+    width:295px;
+    height:60px;
+    display:block;
+    clear:both;   
+}
+.LabelContentListText
+{
+    width:155px;
+    height:40px;
+    margin:10px 2px;
+    display:block;
+    float:left;
+}
+
+.LabelContentListText span
+{
+    width:155px;
+    height:20px;
+    line-height:20px;
+    margin:2px 0px;
+    display:block;
+    font-size:12px;
+    color:#056559;
+}
+
+
+.tmpl-label-parameter-container
+{
+    width:240px;
+    height:120px;
+    display:block;
+}
+
+.tmpl-label-parameter-input-title
+{
+    width:160px;
+    height:20px;
+    margin:10px 40px 0px 40px;
+    display:block;
+    font-size:13px;
+    line-height:20px;
+    
+}
+
+.tmpl-label-parameter-input-content
+{
+    width:200px;
+    height:56px;
+    margin:4px 20px 0px 20px;
+    display:block;
+    font-size:12px;
+    
+}
+
+.tmpl-label-parameter-button-sure
+{
+    width:60px;
+    height:25px;
+    margin:5px 5px 0px 45px;
+    display:block;
+    line-height:18px;
+    float:left
+}
+.tmpl-label-parameter-button-cancel
+{
+    width:60px;
+    height:25px;
+    margin:5px 45px 0px 5px;
+    display:block;
+    line-height:18px;
+    float:right;
+}
+
+.tmpl-label-display-container
+{
+    width:240px;
+    height:80px;
+    display:block;
+}
+
+
+.tmpl-label-display-title
+{
+    width:240px;
+    height:30px;
+    display:block;
+}
+.tmpl-label-display-content
+{
+    width:240px;
+    height:50px;
+    display:block;
+}
+
+
+
+
+
+.QueryContainer
+{
+    width:100%;
+    height:auto;
+}
+.QueryResultContainer
+{
+    width:100%;
+    height:auto;
+    overflow:visible;   
+}
+
+
+.QueryReturnDiv
+{
+    width:100%;
+    height:auto;
+    display:block;
+    clear:both;
+    text-align:center;
+    background-color:#fff;
+    /*background-image:url(../IMG/common/addrPage.png);
+    background-position:-5px 0px;*/
+    cursor:default;
+}
+
+.QueryReturnDiv span
+{
+    display:block;
+    float:left;
+    height:100%;
+    line-height:32px;
+    width:120px;
+    margin:0px 10px 0px 10px;
+    font-size:12px;
+    text-align:left;
+    background-color:Transparent;
+       
+}
+
+.QueryReturnDiv a
+{
+    display:block;
+    float:left;
+    height:100%;
+    line-height:32px;
+    width:75px;
+    cursor:pointer;
+    color:#d8ad00;
+    font-size:12px;
+    background-color:Transparent;
+       
+}
+.QueryContentList
+{
+    clear:both;
+}
+
+.QueryContentListItem
+{
+    width:200px;
+    height:300px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+}
+
+.QueryContentListItemActive
+{
+    width:295px;
+    height:80px;
+    background-color:#E5EEFF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+}
+
+.ClassifyContainer
+{
+	width:100%;
+	height:auto;
+	font-size:12px;
+	color:#056559;
+	border-bottom:dotted 1px #ccc;
+}
+
+
+.ClassifyTitle
+{
+	width:200px;
+	height:30px;
+	display:none;
+	font-size:12px;
+	line-height:30px;
+	margin:0px 14px;
+	
+	
+}
+.ClassifyContent a
+{
+	margin:4px 0px 4px 14px;
+	color:#d8ad00;
+	display:inline-block;
+	font-size:12px;
+	cursor:pointer;
+	
+}
+
+.ClassifyContent
+{
+	
+	
+}
+
+.QueryContentListTitle
+{
+    width:28px;
+    height:43px;
+    display:block;
+    float:left;
+    margin:18px 2px 19px 10px;
+}
+
+.QueryContentListText
+{
+    width:155px;
+    height:40px;
+    margin:20px 2px;
+    display:block;
+    float:left;
+    
+}
+
+.QueryContentListText span
+{
+    width:155px;
+    height:20px;
+    line-height:20px;
+    margin:2px 0px;
+    display:block;
+    font-size:12px;
+    color:#056559;
+    
+}
+
+
+.QueryContentListIMG
+{
+    display:block;
+    width:70px;
+    height:50px;
+    float:left;
+    margin:15px 4px 15px 2px;
+}
+
+.QueryPageList
+{
+	background-color:transparent;
+	width:100%;
+	height:80px;
+	line-height:80px;
+	left:0px;
+	bottom:0px;	
+	text-align:center;
+
+}
+
+
+.PageList
+{
+    margin:0px auto; 
+    height:18px;  
+    display:inline-block;
+}
+
+.QueryPageItem
+{
+	width:auto;
+	height:16px;
+	margin:0px 2px;
+	padding:0px 4px;
+	display:block;
+	float:left;
+	line-height:16px;
+	font-size:11px;
+	text-align:center;
+	border:solid 1px #056559;
+	background-color:#fff;
+	cursor:pointer;
+	border-radius:2px;	
+}
+
+.NetworkContentListItem
+{
+    width:275px;
+    height:50px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+}
+.NetworkContentListItemActive
+{
+    width:275px;
+    height:50px;
+    background-color:#F5F7FF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+}
+
+
+.NetworkResultListItemActive
+{
+    width:265px;
+    height:40px;
+    padding:0px 0px 0px 30px;
+    background-color:#F5F7FF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+    font-size:12px;
+    color:#4c7b11;
+    line-height:40px;
+}
+
+.NetworkResultListItem
+{
+    width:265px;
+    padding:0px 0px 0px 30px;
+    height:40px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+    font-size:12px;
+    color:#4c7b11;
+    line-height:40px;
+}
+
+.NetworkResultListItemIMG
+{
+    width:23px;
+    height:32px;
+    display:block;
+    float:left;
+    margin:4px 8px 4px 9px;
+    background-image:url(../IMG/common/carswitch.png);
+    background-repeat:no-repeat;
+
+}
+
+.NetworkResultListItemIMGF
+{
+    width:23px;
+    height:23px;
+    display:block;
+    float:left;
+    margin:5px 8px 12px 9px;
+    background-image:url(../IMG/common/s.png);
+    background-repeat:no-repeat;
+
+}
+
+.NetworkResultListItemIMGL
+{
+    width:23px;
+    height:23px;
+    display:block;
+    float:left;
+    margin:5px 8px 12px 9px;
+    background-image:url(../IMG/common/e.png);
+    background-repeat:no-repeat;
+
+}
+
+.NetworkResultListItemSpan
+{
+    width:195px;
+    height:32px;
+    margin:4px 5px;
+    display:block;
+    float:left;
+    line-height:32px;
+}
+.NetworkResultListItemLength
+{
+    width:105px;
+    height:32px;
+    display:block;
+    float:right;
+    color:#333;
+    line-height:32px;
+    text-align:left;
+}
+
+.NetworkContentListTitle
+{
+	width:28px;
+    height:43px;
+    display:block;
+    float:left;
+    margin:4px 2px 3px 10px;
+	
+}
+
+.NetworkContentListText
+{
+    width:155px;
+    height:40px;
+    margin:5px 2px;
+    display:block;
+    float:left;
+    
+}
+
+.NetworkContentListText span
+{
+    width:155px;
+    height:40px;
+    line-height:24px;
+    margin:0px 0px;
+    display:block;
+    font-size:12px;
+    color:#056559;
+    
+}
+.NetworkContentListIMG
+{
+	width:64px;
+	height:30px;
+	margin:10px 6px;
+	display:inline-block;
+	float:left;
+	background-image:url(../IMG/common/addrPage.png);
+	background-repeat:no-repeat;
+	background-position:-87px -80px;
+	text-align:center;
+	line-height:30px;
+	color:#d8ad00;
+	font-size:12px;
+}
+
+.NetworkContentListIMGActive
+{
+	width:64px;
+	height:30px;
+	margin:10px 6px;
+	display:inline-block;
+	float:left;
+	background-image:url(../IMG/common/addrPage.png);
+	background-repeat:no-repeat;
+	background-position:-156px -80px;
+	text-align:center;
+	line-height:30px;
+	color:#d8ad00;
+	font-size:12px;
+}
+
+
+/*公交站点*/
+.StationContentListItem
+{
+    width:275px;
+    height:50px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+}
+.StationContentListItemActive
+{
+    width:275px;
+    height:50px;
+    background-color:#F5F7FF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+}
+
+.StationResultListItemActive
+{
+    width:245px;
+    height:40px;
+    padding:0px 0px 0px 30px;
+    background-color:#F5F7FF;
+    border-bottom:dotted 1px #ccc;
+    cursor:pointer;
+    font-size:12px;
+    color:#4c7b11;
+    line-height:40px;
+}
+
+.StationResultListItem
+{
+    width:245px;
+    padding:0px 0px 0px 30px;
+    height:40px;
+    background-color:#fff;
+    border-bottom:dotted 1px #ccc;
+    font-size:12px;
+    color:#4c7b11;
+    line-height:40px;
+}
+
+.StationResultListItemIMG
+{
+    width:23px;
+    height:32px;
+    display:block;
+    float:left;
+    margin:4px 8px 4px 9px;
+    background-image:url(../IMG/common/carswitch.png);
+    background-repeat:no-repeat;
+
+}
+
+.StationResultListItemIMGF
+{
+    width:30px;
+    height:30px;
+    display:block;
+    float:left;
+    margin:5px 2px 5px 8px;
+    background-image:url(../IMG/common/s.png);
+    background-repeat:no-repeat;
+
+}
+
+.StationResultListItemIMGL
+{
+    width:30px;
+    height:30px;
+    display:block;
+    float:left;
+    margin:5px 2px 5px 8px;
+    background-image:url(../IMG/common/e.png);
+    background-repeat:no-repeat;
+
+}
+
+.StationResultListItemSpan
+{
+    width:195px;
+    height:32px;
+    margin:4px 5px;
+    display:block;
+    float:left;
+    line-height:32px;
+}
+
+.StationContentListTitle
+{
+	width:28px;
+    height:43px;
+    display:block;
+    float:left;
+    margin:4px 2px 3px 10px;
+	
+}
+
+.StationContentListText
+{
+    width:155px;
+    height:40px;
+    margin:5px 2px;
+    display:block;
+    float:left;
+    
+}
+
+.StationContentListText span
+{
+    width:155px;
+    height:40px;
+    line-height:24px;
+    margin:0px 0px;
+    display:block;
+    font-size:12px;
+    color:#056559;
+    
+}
+.StationContentListIMG
+{
+	width:64px;
+	height:30px;
+	margin:10px 6px;
+	display:inline-block;
+	float:left;
+	background-image:url(../IMG/common/addrPage.png);
+	background-repeat:no-repeat;
+	background-position:-87px -80px;
+	text-align:center;
+	line-height:30px;
+	color:#d8ad00;
+	font-size:12px;
+}
+
+.StationContentListIMGActive
+{
+	width:64px;
+	height:30px;
+	margin:10px 6px;
+	display:inline-block;
+	float:left;
+	background-image:url(../IMG/common/addrPage.png);
+	background-repeat:no-repeat;
+	background-position:-156px -80px;
+	text-align:center;
+	line-height:30px;
+	color:#d8ad00;
+	font-size:12px;
+}
+
+/**/
+.StationDialog
+{
+	display:block;
+	width:200px;
+	height:100px;	
+	
+}
+
+.StationDialog .Title
+{
+	display:block;
+	width:190px;
+	height:20px;	
+	font-size:13px;
+	color:#056559;
+	line-height:20px;
+	margin:0px 5px;
+	border-bottom:solid 1px #ccc;
+}
+.StationDialog .Content
+{
+	display:block;
+	width:190px;
+	height:46px;	
+	font-size:13px;
+	color:#4c7b11;
+	margin:12px 5px;
+}
+
+.StationDialog .Content a
+{	
+	font-size:12px;
+	color:#d8ad00;
+	margin:0px 4px;
+	cursor:pointer;
+}
+
+
+.BusResultMSG
+{
+	width:100%;
+	height:auto;
+	display:block;	
+	border-bottom:dotted 1px #ccc;
+}
+
+.BusResultMSG div
+{
+	width:245px;
+	height:auto;
+	margin:0px 0px 0px 50px;
+	display:block;
+	font-size:12px;
+	color:#056559;	
+	
+}
+
+
+.nmSZCSModule
+{
+	width:70px;
+	height:70px;
+	margin:5px 5px;
+	display:block;
+	float:left;	
+	border:solid 1px #fff;
+	cursor:pointer;
+	border-radius:4px;
+}
+
+.nmSZCSModuleActive
+{
+	width:70px;
+	height:70px;
+	margin:5px 5px;
+	display:block;
+	float:left;	
+	border:solid 1px #9cc;
+	cursor:pointer;
+	border-radius:4px;
+}
+
+.nmSZCSModule img
+{
+	width:40px;
+	height:40px;
+	margin:5px 15px 0px 15px; 
+}
+
+.nmSZCSModule span
+{
+	width:70px;
+	height:16px;
+	margin:0px 0px 9px 0px;
+	line-height:16px;
+	text-align:center;
+	display:block;
+	font-size:12px;
+	color:#000;
+}
+
+.nmSZCSModuleActive img
+{
+	width:40px;
+	height:40px;
+	margin:5px 15px 0px 15px; 
+}
+
+.nmSZCSModuleActive span
+{
+	width:70px;
+	height:16px;
+	margin:0px 0px 9px 0px;
+	line-height:16px;
+	text-align:center;
+	display:block;
+	font-size:12px;
+	color:#000;
+}
+
+/*面板显示样式列表*/
+.POI
+{
+	width:240px;
+	height:auto;
+	display:block;
+	overflow:hidden;
+}
+.POITitle
+{
+	width:220px;
+	height:20px;
+	font-size:12px;
+	line-height:20px;	
+	padding:0px 10px;
+	border-bottom:solid 1px #ccc;
+}
+
+.POIContain
+{
+	width:240px;
+	height:auto;
+}
+.POITool
+{
+    width:240px;
+    height:14px;
+    clear:both;
+}
+
+.POITool a
+{
+    line-height:14px;
+    display:inline-block;
+    margin:0px 10px 0px 10px;
+    color:#3D6DCC;
+    text-decoration:none;
+}
+.POIBuffer
+{
+    width:240px;
+    height:40px; 
+    clear:both;
+    display:none;
+}
+.POIBuffer .POIBufferKeys
+{
+    width:240px;
+    height:24px;
+    line-height:30px;
+    margin:0px 0px 0px 0px; 
+    border-top:solid 1px #ccc;  
+}
+
+.POIBuffer .POIBufferKeys a
+{
+    color:#3D6DCC;
+    font-size:12px; 
+    display:inline;
+    margin:0px 2px 0px 0px; 
+    text-decoration:none;
+}
+
+.POIBuffer .POIBufferKeys a:hover
+{
+    color:#3D6DCC;
+    font-size:12px; 
+    display:inline;
+    margin:0px 2px 0px 0px; 
+    text-decoration:underline;
+}
+
+
+.POIBuffer .POIBufferBar
+{
+    width:220px;
+    height:8px;
+    margin:4px 10px 12px 10px;
+    display:block;
+    border-width:0px;
+    clear:both;
+}
+
+.POISetStart
+{
+    width:240px;
+    height:40px; 
+    clear:both;
+    display:none;
+    border-top:solid 1px #ccc;  
+}
+
+.POISetEnd
+{
+    width:240px;
+    height:40px; 
+    clear:both;
+    display:none;
+    border-top:solid 1px #ccc;  
+}
+
+
+
+.POIText
+{
+	width:160px;
+	height:auto;
+	display:block;
+	margin:8px 0px 2px 0px;
+	float:left;
+}
+
+.POI span
+{
+	width:150px;
+	height:auto;
+	margin:4px 5px 0px 5px;
+	font-size:12px;
+	color:#555;
+	line-height:16px;
+	display:block;
+}
+
+.POIImage
+{
+	width:80px;
+	height:60px;	
+	margin:15px 0px 15px;
+	display:block;
+	float:left;
+	clear:right;
+}
+
+.POIImage img
+{
+	width:80px;
+	height:60px;	
+	border:none;
+	cursor:pointer;
+}
+
+
+
+.VIEW
+{
+	width:270px;
+	height:auto;
+	display:block;	
+
+}
+.VIEWTitle
+{
+	width:250px;
+	height:20px;
+	font-size:12px;
+	line-height:20px;	
+	padding:0px 10px;
+	border-bottom:solid 1px #ccc;
+	
+}
+
+.VIEWContain
+{
+	width:270px;
+	height:90px;
+}
+
+.VIEWText
+{
+	width:180px;
+	height:auto;
+	display:block;
+	margin:8px 0px 2px 0px;
+	float:left;
+}
+
+.VIEW span
+{
+	width:170px;
+	height:auto;
+	margin:4px 5px 0px 5px;
+	font-size:12px;
+	color:#555;
+	line-height:16px;
+	display:block;
+}
+
+.VIEWImage
+{
+	width:80px;
+	height:60px;	
+	margin:15px 0px 15px;
+	display:block;
+	float:left;
+}
+
+.VIEWImage img
+{
+	width:80px;
+	height:60px;	
+	border:none;
+	cursor:pointer;
+}
+
+.VIEWMeno
+{
+	width:250px;
+	margin:0px 10px 8px 10px;
+	height:auto;
+	display:block;	
+	clear:both;
+	color:#555;
+}
+
+
+.HOTEL
+{
+	width:270px;
+	height:auto;
+	display:block;	
+
+}
+.HOTELTitle
+{
+	width:250px;
+	height:20px;
+	font-size:12px;
+	line-height:16px;	
+	padding:0px 10px;
+	border-bottom:solid 1px #ccc;
+	
+}
+
+.HOTELContain
+{
+	width:270px;
+	height:auto;
+}
+
+.HOTELText
+{
+	width:180px;
+	height:auto;
+	display:block;
+	margin:8px 0px 2px 0px;
+	float:left;
+}
+
+.HOTEL span
+{
+	width:170px;
+	height:auto;
+	margin:4px 5px 0px 5px;
+	font-size:12px;
+	color:#555;
+	line-height:16px;
+	display:block;
+}
+
+.HOTELImage
+{
+	width:80px;
+	height:60px;	
+	margin:15px 0px 15px;
+	display:block;
+	float:left;
+}
+
+.HOTELImage img
+{
+	width:80px;
+	height:60px;	
+	border:none;
+	cursor:pointer;
+}
+
+.HOTELMeno
+{
+	width:250px;
+	margin:0px 10px 8px 10px;
+	height:auto;
+	clear:both;
+	display:block;	
+	color:#555;
+}
+
+
+.AGENCY
+{
+	width:270px;
+	height:auto;
+	display:block;	
+
+}
+.AGENCYTitle
+{
+	width:250px;
+	height:20px;
+	font-size:12px;
+	line-height:20px;	
+	padding:0px 10px;
+	border-bottom:solid 1px #ccc;
+	
+}
+
+.AGENCYContain
+{
+	width:270px;
+	height:auto;
+}
+
+.AGENCYText
+{
+	width:180px;
+	height:auto;
+	display:block;
+	margin:8px 0px 2px 0px;
+	float:left;
+}
+
+.AGENCY span
+{
+	width:170px;
+	height:auto;
+	margin:4px 5px 0px 5px;
+	font-size:12px;
+	color:#555;
+	line-height:16px;
+	display:block;
+}
+
+.AGENCYImage
+{
+	width:80px;
+	height:60px;	
+	margin:15px 0px 15px;
+	display:block;
+	float:left;
+}
+
+.AGENCYImage img
+{
+	width:80px;
+	height:60px;	
+	border:none;
+	cursor:pointer;
+}
+
+.AGENCYMeno
+{
+	width:250px;
+	margin:0px 10px 8px 10px;
+	height:auto;
+	display:block;	
+	clear:both;
+	color:#555;
+}
+
+.ThemeSearchPanel
+{
+  width:287px;
+  height:auto;
+  display:block;
+  clear:both;
+  margin:0px 0px 4px 0px;
+}
+
+.ThemeTool
+{
+    width:270px;
+    height:14px;
+    clear:both;
+    
+}
+
+.ThemeTool a
+{
+    line-height:14px;
+    display:inline-block;
+    margin:0px 15px 0px 10px;
+    color:#3D6DCC;
+    text-decoration:none;
+}
+.ThemeBuffer
+{
+    width:270px;
+    height:40px; 
+    clear:both;
+    display:none;
+}
+.ThemeBuffer .ThemeBufferKeys
+{
+    width:250px;
+    height:24px;
+    line-height:30px;
+    margin:0px 10px 0px 10px; 
+    border-top:solid 1px #ccc;  
+}
+
+.ThemeBuffer .ThemeBufferKeys a
+{
+    color:#3D6DCC;
+    font-size:12px; 
+    display:inline;
+    margin:0px 2px 0px 0px; 
+    text-decoration:none;
+}
+
+.ThemeBuffer .ThemeBufferKeys a:hover
+{
+    color:#3D6DCC;
+    font-size:12px; 
+    display:inline;
+    margin:0px 2px 0px 0px; 
+    text-decoration:underline;
+}
+
+
+.ThemeBuffer .ThemeBufferBar
+{
+    width:250px;
+    height:8px;
+    margin:4px 10px 12px 10px;
+    display:block;
+    border-width:0px;
+    clear:both;
+}
+
+
+.ThemeSetStart
+{
+    width:270px;
+    height:40px; 
+    clear:both;
+    display:none;
+    border-top:solid 1px #ccc;  
+}
+.ThemeSetEnd
+{
+    width:270px;
+    height:40px; 
+    clear:both;
+    display:none;
+    border-top:solid 1px #ccc;  
+}
+
+
+#ImageExplorer
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:9000;
+	display:none;
+}
+
+#ImageExplorer .background
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-color:#000;
+	opacity:0.3;
+	filter:alpha(opacity=30);	
+	z-index:1;
+	display:block;
+}
+
+#ImgContainer
+{
+	display:block;
+	width:800px;
+	height:600px;
+	position:relative;
+	z-index:10001;
+	margin:40px auto 10px;
+	background-color:Transparent;
+}
+
+.ImageClose
+{
+	display:block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:48px;
+	height:48px;
+	z-index:9003;
+	background-image:url(../IMG/common/photo_scan_layer.png);
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+}
+
+.ImageCloseActive
+{
+	display:block;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:48px;
+	height:48px;
+	z-index:9003;
+	background-image:url(../IMG/common/photo_scan_layer.png);
+	background-position:-48px 0px;
+	background-repeat:no-repeat;
+}
+
+#ImageManipulate
+{
+	width:300px;
+	height:64px;
+	display:block;
+	z-index:9005;
+	position:relative;
+	margin:0px auto;
+	background-color:#888;	
+}
+
+.ImageNext
+{
+	width:64px;
+	height:64px;
+	display:block;
+	float:left;
+	margin:0px 50px 0px 36px;
+	background-image:url(../IMG/common/iconext.png);
+	background-repeat:no-repeat;
+}
+
+.ImagePrev
+{
+	width:64px;
+	height:64px;
+	display:block;
+	float:left;
+	margin:0px 36px 0px 50px;
+	background-image:url(../IMG/common/icoprev.png);
+	background-repeat:no-repeat;
+}
+
+#SplashWindow
+{
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	background-color:#FFF;
+	left:0px;
+	top:0px;
+	z-index:10001;
+	
+}
+#SplashHeader
+{
+	width:100%;
+	height:78px;
+	display:block;
+	background-color:#FFF;	
+}
+
+#SplashLogo
+{
+	width:397px;
+	height:78px;
+	display:block;
+	margin:0px 350px 0px 50px;
+	float:left;
+	background-image:url(../IMG/splash/logo.png);
+	background-repeat:no-repeat;
+	border:none;
+}
+#SplashBtn
+{
+    width:70px;
+    height:28px;
+    margin:20px 70px 30px 61px;
+    background-image:url(../IMG/splash/splashBtn.jpg);
+    background-repeat:no-repeat;
+    display:block;
+    float:left;
+    cursor:pointer;
+}
+
+
+#SplashBody
+{
+    width:100%;
+    height:480px;
+    display:block; 
+    background-color:#aaa;  
+}
+
+#SplashFlash
+{
+    width:998px;
+    height:480px;
+    margin:0px auto;
+    display:block;
+
+}
+#SplashBanner
+{
+    width:100%;
+    height:85px;
+    display:block;
+}
+#SplashRotater
+{
+    width:891px;
+    height:85px;
+    margin:0px auto;
+    background-image:url(../IMG/splash/splashfooter.jpg);
+    background-repeat:no-repeat;
+}
+
+#SplashSpit
+{
+	width:100%;
+	height:115px;
+	display:block;
+	background-image:url(../IMG/splash/spit.jpg);
+	background-repeat:repeat-x;
+	
+}
+#SplashDescribe
+{
+	background-color:Transparent;
+	font-size:12px;
+	color:#676767;
+	text-align:center;	
+	font-family:Verdana, Geneva, sans-serif;
+}
+#SplashDescribe p
+{
+	margin:10px 2px 0px 2px;
+}
+
+.OCNARROW
+{
+	width:45px;
+	height:62px;
+	margin:58px 0px 0px 0px;
+	padding:0px;
+	display:inline-block;
+	position:relative;
+	left:1px;
+	top:0px;
+	float:left;
+	cursor:default;
+	background-image:url(../IMG/common/ocnarrow.png);	
+	background-repeat:no-repeat;
+}
+.OCNContain
+{
+    width:268px;
+    height:auto;
+    background-color:#fff;
+    border:solid 1px #999;
+    border-radius:4px;
+    display:block;
+    float:left;
+}
+
+.OCNCLOSEBOX
+{
+    width:14px;
+    height:14px;
+    display:inline-block;
+    margin:4px 0px 100px;
+    background-image:url(../IMG/common/line_red.png);
+    background-position:-50px 0px;
+    background-repeat:no-repeat;
+    float:left;
+    cursor:pointer;
+}
+
+.OCNPopup
+{	
+	width:320px;
+	height:auto;
+	cursor:default;
+}
+.btw
+{
+    font-size:12px;
+    color:#ff0022;
+    
+}
+.btm
+{
+    font-size:12px;
+    color:rgb(96,182,10);
+}

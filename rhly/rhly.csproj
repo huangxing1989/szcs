@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99B31546-8646-4779-B6CF-1DE3E7402ED5}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>szcs</RootNamespace>
+    <AssemblyName>szcs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="web.config" />
+    <Content Include="SDK\md5.js" />
+    <Content Include="SDK\NewMapServerJsAPI.js" />
+    <Content Include="SDK\img\blank.gif" />
+    <Content Include="SDK\img\button_down.gif" />
+    <Content Include="SDK\img\button_info_1.gif" />
+    <Content Include="SDK\img\button_info_2.gif" />
+    <Content Include="SDK\img\button_up.gif" />
+    <Content Include="SDK\img\cloud-dialog-relative.png" />
+    <Content Include="SDK\img\drag-rectangle-off.png" />
+    <Content Include="SDK\img\drag-rectangle-on.png" />
+    <Content Include="SDK\img\east-mini_1.png" />
+    <Content Include="SDK\img\east-mini_2.png" />
+    <Content Include="SDK\img\layerListOff.gif" />
+    <Content Include="SDK\img\layerListOn.gif" />
+    <Content Include="SDK\img\logo.png" />
+    <Content Include="SDK\img\marker-blue.png" />
+    <Content Include="SDK\img\marker-gold.png" />
+    <Content Include="SDK\img\marker-green.png" />
+    <Content Include="SDK\img\marker.png" />
+    <Content Include="SDK\img\measuring-stick-off.png" />
+    <Content Include="SDK\img\measuring-stick-on.png" />
+    <Content Include="SDK\img\north-mini_1.png" />
+    <Content Include="SDK\img\north-mini_2.png" />
+    <Content Include="SDK\img\panning-hand-off.png" />
+    <Content Include="SDK\img\panning-hand-on.png" />
+    <Content Include="SDK\img\print.html" />
+    <Content Include="SDK\img\slider_1.png" />
+    <Content Include="SDK\img\slider_2.png" />
+    <Content Include="SDK\img\south-mini_1.png" />
+    <Content Include="SDK\img\south-mini_2.png" />
+    <Content Include="SDK\img\west-mini_1.png" />
+    <Content Include="SDK\img\west-mini_2.png" />
+    <Content Include="SDK\img\zoom-minus-mini.png" />
+    <Content Include="SDK\img\zoom-plus-mini.png" />
+    <Content Include="SDK\img\zoom-world-mini.png" />
+    <Content Include="SDK\img\zoombar_1.png" />
+    <Content Include="SDK\img\zoombar_2.png" />
+    <Content Include="SDK\img\zoomLevel-minus-mini_1.png" />
+    <Content Include="SDK\img\zoomLevel-minus-mini_2.png" />
+    <Content Include="SDK\img\zoomLevel-plus-mini_1.png" />
+    <Content Include="SDK\img\zoomLevel-plus-mini_2.png" />
+    <Content Include="SDK\theme\default\framedCloud.css" />
+    <Content Include="SDK\theme\default\ie6-style.css" />
+    <Content Include="SDK\theme\default\style.css" />
+    <Content Include="SDK\theme\default\image\button_conner_down.gif" />
+    <Content Include="SDK\theme\default\image\button_conner_up.gif" />
+    <Content Include="SDK\theme\default\image\button_down.gif" />
+    <Content Include="SDK\theme\default\image\button_in.gif" />
+    <Content Include="SDK\theme\default\image\button_info_1.gif" />
+    <Content Include="SDK\theme\default\image\button_info_2.gif" />
+    <Content Include="SDK\theme\default\image\button_left.gif" />
+    <Content Include="SDK\theme\default\image\button_left_down.gif" />
+    <Content Include="SDK\theme\default\image\button_left_up.gif" />
+    <Content Include="SDK\theme\default\image\button_out.gif" />
+    <Content Include="SDK\theme\default\image\button_right.gif" />
+    <Content Include="SDK\theme\default\image\button_right_down.gif" />
+    <Content Include="SDK\theme\default\image\button_right_down1.gif" />
+    <Content Include="SDK\theme\default\image\button_right_up.gif" />
+    <Content Include="SDK\theme\default\image\button_trans_1.gif" />
+    <Content Include="SDK\theme\default\image\button_trans_4.gif" />
+    <Content Include="SDK\theme\default\image\button_up.gif" />
+    <Content Include="SDK\theme\default\image\closebutton.PNG" />
+    <Content Include="SDK\theme\default\image\dot.gif" />
+    <Content Include="SDK\theme\default\image\grn-pushpin.png" />
+    <Content Include="SDK\theme\default\image\i_print.gif" />
+    <Content Include="SDK\theme\default\image\jxbg.jpg" />
+    <Content Include="SDK\theme\default\image\marker.gif" />
+    <Content Include="SDK\theme\default\image\red-pushpin.png" />
+    <Content Include="SDK\theme\default\image\r_closedfolder2.GIF" />
+    <Content Include="SDK\theme\default\image\r_openfolder2.GIF" />
+    <Content Include="SDK\theme\default\image\tool-clear.gif" />
+    <Content Include="SDK\theme\default\image\tool-measure-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-measure-on.gif" />
+    <Content Include="SDK\theme\default\image\tool-measurearea-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-measurearea-on.gif" />
+    <Content Include="SDK\theme\default\image\tool-query-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-query-on.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoomfull.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoomin-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoomin-on.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoomout-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoomout-on.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoompan-off.gif" />
+    <Content Include="SDK\theme\default\image\tool-zoompan-on.gif" />
+    <Content Include="SDK\theme\default\image\tool_5_1.gif" />
+    <Content Include="SDK\theme\default\image\tool_5_2.gif" />
+    <Content Include="SDK\theme\default\image\tool_print_1.png" />
+    <Content Include="SDK\theme\default\image\tool_route_1.gif" />
+    <Content Include="SDK\theme\default\image\tool_route_2.gif" />
+    <Content Include="SDK\theme\default\img\add_point_off.png" />
+    <Content Include="SDK\theme\default\img\add_point_on.png" />
+    <Content Include="SDK\theme\default\img\blank.gif" />
+    <Content Include="SDK\theme\default\img\close.gif" />
+    <Content Include="SDK\theme\default\img\drag-rectangle-off.png" />
+    <Content Include="SDK\theme\default\img\drag-rectangle-on.png" />
+    <Content Include="SDK\theme\default\img\draw_line_off.png" />
+    <Content Include="SDK\theme\default\img\draw_line_on.png" />
+    <Content Include="SDK\theme\default\img\draw_point_off.png" />
+    <Content Include="SDK\theme\default\img\draw_point_on.png" />
+    <Content Include="SDK\theme\default\img\draw_polygon_off.png" />
+    <Content Include="SDK\theme\default\img\draw_polygon_on.png" />
+    <Content Include="SDK\theme\default\img\editing_tool_bar.png" />
+    <Content Include="SDK\theme\default\img\move_feature_off.png" />
+    <Content Include="SDK\theme\default\img\move_feature_on.png" />
+    <Content Include="SDK\theme\default\img\navigation_history.png" />
+    <Content Include="SDK\theme\default\img\overview_replacement.gif" />
+    <Content Include="SDK\theme\default\img\panning-hand-off.png" />
+    <Content Include="SDK\theme\default\img\panning-hand-on.png" />
+    <Content Include="SDK\theme\default\img\pan_off.png" />
+    <Content Include="SDK\theme\default\img\pan_on.png" />
+    <Content Include="SDK\theme\default\img\remove_point_off.png" />
+    <Content Include="SDK\theme\default\img\remove_point_on.png" />
+    <Content Include="SDK\theme\default\img\save_features_off.png" />
+    <Content Include="SDK\theme\default\img\save_features_on.png" />
+    <Content Include="SDK\theme\default\img\view_next_off.png" />
+    <Content Include="SDK\theme\default\img\view_next_on.png" />
+    <Content Include="SDK\theme\default\img\view_previous_off.png" />
+    <Content Include="SDK\theme\default\img\view_previous_on.png" />
+    <Content Include="SDK\theme\default\img\zoomin-rectangle-off.png" />
+    <Content Include="SDK\theme\default\img\zoomin-rectangle-on.png" />
+    <Content Include="SDK\theme\default\img\zoomout-rectangle-off.png" />
+    <Content Include="SDK\theme\default\img\zoomout-rectangle-on.png" />
+    <Content Include="JS\jquery.cookie.js" />
+    <Content Include="JS\jquery-1.4.1.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\GetImages.cs" />
+    <Compile Include="DAL\KeywordBuffer.cs" />
+    <Compile Include="DAL\KeywordSearch.cs" />
+    <Compile Include="DAL\KeywordRectangle.cs" />
+    <Compile Include="DAL\LabelAdd.cs" />
+    <Compile Include="DAL\LabelDel.cs" />
+    <Compile Include="DAL\LabelEdit.cs" />
+    <Compile Include="DAL\LabelGet.cs" />
+    <Compile Include="DAL\LineSearch.cs" />
+    <Compile Include="DAL\StationSearch.cs" />
+    <Compile Include="DAL\SwitchSearch.cs" />
+    <Compile Include="DAL\UserGet.cs" />
+    <Compile Include="DAL\UserAdd.cs" />
+    <Compile Include="Delegate.aspx.cs">
+      <DependentUpon>Delegate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delegate.aspx.designer.cs">
+      <DependentUpon>Delegate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mgr\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mgr\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SnapParams.cs" />
+    <Compile Include="Model\SnapResult.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="SVR\Feedback.ashx.cs">
+      <DependentUpon>Feedback.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\GetConfig.ashx.cs">
+      <DependentUpon>GetConfig.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SVR\GetFeature.ashx.cs">
+      <DependentUpon>GetFeature.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\GetResource.ashx.cs">
+      <DependentUpon>GetResource.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\GetSnap.ashx.cs">
+      <DependentUpon>GetSnap.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SVR\Label.ashx.cs">
+      <DependentUpon>Label.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\ShareMap.ashx.cs">
+      <DependentUpon>ShareMap.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\UploadLabel.ashx.cs">
+      <DependentUpon>UploadLabel.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="SVR\Account.ashx.cs">
+      <DependentUpon>Account.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ConstructBus.cs" />
+    <Compile Include="Util\DataSet2JSON.cs" />
+    <Compile Include="Util\OraHelper.cs" />
+    <Compile Include="Util\Reader2JSON.cs" />
+    <Compile Include="Util\SendMail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\SnapUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\XML2JSON.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clip\" />
+    <Folder Include="IMG\mgr\title\" />
+    <Folder Include="IMG\ui\cls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="true" VerifyCodeBehindEvents="true">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="true" />
+      </Properties>
+    </MonoDevelop>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51487</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <ItemGroup>
+    <None Include="Bak\公交.sql" />
+    <None Include="SDK\img\Flash_Column3D.swf" />
+    <None Include="SDK\img\Flash_Line.swf" />
+    <None Include="SDK\img\Flash_Pie3D.swf" />
+    <None Include="SDK\img\grab.cur" />
+    <None Include="SDK\img\grabbing.cur" />
+    <None Include="SDK\img\zoomin.cur" />
+    <None Include="SDK\img\zoomout.cur" />
+    <None Include="SDK\theme\default\image\jxbg.bmp" />
+    <Content Include="bin\szcs.dll" />
+    <Content Include="bin\szcs.pdb" />
+    <Content Include="CSS\mgr.css" />
+    <Content Include="IMG\mgr\sideBtn\ctrl_0.png" />
+    <Content Include="IMG\mgr\sideBtn\ctrl_1.png" />
+    <Content Include="IMG\mgr\sideBtn\ctrl_2.png" />
+    <Content Include="IMG\title\banner.swf" />
+    <Content Include="IMG\title\banner.jpg" />
+    <Content Include="IMG\title\logo.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_09.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_09a.png" />
+    <Content Include="IMG\ui\danxia.jpg" />
+    <Content Include="IMG\ui\ctrl\controlBarBg.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_01.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_01a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_02.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_02a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_03.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_03a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_04.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_04a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_05.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_05a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_06.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_06a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_07.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_07a.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_08.png" />
+    <Content Include="IMG\ui\ctrl\ctrl_08a.png" />
+    <Content Include="IMG\ui\menu\s_right2.png" />
+    <Content Include="IMG\ui\menu\s_bg.png" />
+    <Content Include="IMG\ui\menu\s_left.png" />
+    <Content Include="IMG\ui\menu\s_right.png" />
+    <Content Include="IMG\ui\nav\nav_bg.png" />
+    <Content Include="IMG\ui\footer_bg.png" />
+    <Content Include="IMG\ui\nav\ti_01.png" />
+    <Content Include="IMG\ui\nav\ti_010.png" />
+    <Content Include="IMG\ui\nav\ti_02.png" />
+    <Content Include="IMG\ui\nav\ti_03.png" />
+    <Content Include="IMG\ui\nav\ti_04.png" />
+    <Content Include="IMG\ui\nav\ti_05.png" />
+    <Content Include="IMG\ui\nav\ti_06.png" />
+    <Content Include="IMG\ui\nav\ti_07.png" />
+    <Content Include="IMG\ui\nav\ti_08.png" />
+    <Content Include="IMG\ui\nav\ti_09.png" />
+    <Content Include="IMG\ui\nav\weatherWater.png" />
+    <Content Include="IMG\ui\panel\body.png" />
+    <Content Include="IMG\ui\panel\footer.png" />
+    <Content Include="IMG\ui\panel\title.png" />
+    <Content Include="IMG\ui\panel_bg.png" />
+    <Content Include="JS\mgr.js" />
+    <Content Include="Mgr\Default.aspx" />
+    <Content Include="SDK\img\east-mini_3.png" />
+    <Content Include="SDK\img\north-mini_3.png" />
+    <Content Include="SDK\img\slider_3.png" />
+    <Content Include="SDK\img\south-mini_3.png" />
+    <Content Include="SDK\img\west-mini_3.png" />
+    <Content Include="SDK\img\zoombar_3.png" />
+    <Content Include="SDK\img\zoomLevel-minus-mini_3.png" />
+    <Content Include="SDK\img\zoomLevel-plus-mini_3.png" />
+    <Content Include="SVR\Account.ashx" />
+    <Content Include="CSS\sty.css" />
+    <Content Include="IMG\common\loginbtn.png" />
+    <Content Include="SDK\theme\default\szcs.css" />
+    <Content Include="SVR\Label.ashx" />
+    <Content Include="CSS\rhly.css" />
+    <Content Include="IMG\common\busmapicon.png" />
+    <Content Include="IMG\common\icoprev.png" />
+    <Content Include="IMG\common\iconext.png" />
+    <Content Include="IMG\common\carswitch.png" />
+    <Content Include="IMG\common\line_red.png" />
+    <Content Include="IMG\common\marker.png" />
+    <Content Include="IMG\feedback\top.png" />
+    <Content Include="IMG\splash\logo.png" />
+    <Content Include="IMG\splash\splashBtn.jpg" />
+    <Content Include="IMG\splash\metro.swf" />
+    <Content Include="IMG\splash\logo.jpg" />
+    <Content Include="IMG\splash\splashfooter.jpg" />
+    <Content Include="IMG\ui\menu\menu_bg.jpg" />
+    <Content Include="IMG\ui\menu\menuitem.jpg" />
+    <Content Include="IMG\common\nopic.jpg" />
+    <Content Include="IMG\feedback\print.jpg" />
+    <Content Include="IMG\module\o3d.png" />
+    <Content Include="IMG\common\ocnarrow.png" />
+    <Content Include="index.htm" />
+    <Content Include="JS\common.js" />
+    <Content Include="JS\GeoGlobeJS.min.js" />
+    <Content Include="JS\main.js" />
+    <Content Include="JS\ocn.js" />
+    <Content Include="JS\OpenLayers.js" />
+    <Content Include="JS\template.js" />
+    <Content Include="SDK\img\a3d.png" />
+    <Content Include="SDK\img\i3d.png" />
+    <Content Include="SDK\scroll.min.js" />
+    <Content Include="SVR\ShareMap.ashx" />
+    <Content Include="CSS\mSelect.css" />
+    <Content Include="CSS\sdty.css" />
+    <Content Include="CSS\jqueryui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="CSS\jqueryui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="CSS\jqueryui\images\ui-icons_222222_256x240.png" />
+    <Content Include="CSS\jqueryui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="CSS\jqueryui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="CSS\jqueryui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="CSS\jqueryui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="CSS\jqueryui\jquery-ui-1.8.21.custom.css" />
+    <Content Include="Delegate.aspx" />
+    <Content Include="feedback.htm" />
+    <Content Include="IMG\common\addrPage.png" />
+    <Content Include="IMG\common\capwrap.png" />
+    <Content Include="IMG\common\e.png" />
+    <Content Include="IMG\common\loading.gif" />
+    <Content Include="IMG\common\maploading.png" />
+    <Content Include="IMG\common\photo_scan_layer.png" />
+    <Content Include="IMG\feedback\label.png" />
+    <Content Include="IMG\feedback\feedbackbtn1.jpg" />
+    <Content Include="IMG\feedback\feedbackbtn2.jpg" />
+    <Content Include="IMG\module\agency.png" />
+    <Content Include="IMG\module\hotel.png" />
+    <Content Include="IMG\module\tourview.png" />
+    <Content Include="printpage.htm" />
+    <Content Include="SDK\img\iraster.png" />
+    <Content Include="SDK\img\aterrain.png" />
+    <Content Include="SDK\img\araster.png" />
+    <Content Include="SDK\SZCSJsAPI.js">
+    </Content>
+    <Content Include="SDK\theme\default\image\pieces.png" />
+    <Content Include="IMG\common\s.png" />
+    <Content Include="IMG\list\b_0.png" />
+    <Content Include="IMG\list\b_1.png" />
+    <Content Include="IMG\list\b_2.png" />
+    <Content Include="IMG\list\b_3.png" />
+    <Content Include="IMG\list\b_4.png" />
+    <Content Include="IMG\list\b_5.png" />
+    <Content Include="IMG\list\b_6.png" />
+    <Content Include="IMG\list\b_7.png" />
+    <Content Include="IMG\list\b_8.png" />
+    <Content Include="IMG\list\b_9.png" />
+    <Content Include="IMG\list\b_10.png" />
+    <Content Include="IMG\list\r_0.png" />
+    <Content Include="IMG\list\r_1.png" />
+    <Content Include="IMG\list\r_2.png" />
+    <Content Include="IMG\list\r_3.png" />
+    <Content Include="IMG\list\r_4.png" />
+    <Content Include="IMG\list\r_5.png" />
+    <Content Include="IMG\list\r_6.png" />
+    <Content Include="IMG\list\r_7.png" />
+    <Content Include="IMG\list\r_8.png" />
+    <Content Include="IMG\list\r_9.png" />
+    <Content Include="IMG\list\r_10.png" />
+    <Content Include="IMG\ui\blueCircle_bg.gif" />
+    <Content Include="JS\jquery-ui-1.8.21.custom.min.js" />
+    <Content Include="JS\mSelect.js" />
+    <Content Include="SDK\img\crosshair.cur" />
+    <Content Include="SDK\img\ruler.cur" />
+    <Content Include="SDK\img\ruler1.cur" />
+    <Content Include="SDK\theme\default\image\area.png" />
+    <Content Include="SDK\theme\default\image\capwrap.png" />
+    <Content Include="SDK\theme\default\image\triangle.png" />
+    <Content Include="SDK\theme\default\img\iw_tail.png" />
+    <Content Include="SDK\theme\default\img\line_red.png" />
+    <Content Include="SDK\img\iterrain.png" />
+    <Content Include="SDK\theme\default\img\triangle.png" />
+    <Content Include="SDK\theme\default\img\us_sign.png" />
+    <Content Include="SVR\GetConfig.ashx" />
+    <Content Include="SVR\GetSnap.ashx" />
+    <Content Include="SVR\GetFeature.ashx" />
+    <Content Include="SVR\UploadLabel.ashx" />
+    <Content Include="SVR\GetResource.ashx" />
+    <Content Include="SVR\Feedback.ashx" />
+    <Content Include="Usr\UsrReg.htm" />
+    <Content Include="Usr\UsrLogin.htm" />
+    <Content Include="XML\map.xml" />
+    <Content Include="XML\svr.xml" />
+    <Content Include="XML\cls.xml" />
+  </ItemGroup>
+</Project>
