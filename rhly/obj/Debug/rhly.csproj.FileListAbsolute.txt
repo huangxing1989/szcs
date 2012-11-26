@@ -1,5 +1,0 @@
-F:\数字城市\城市合集\rhly\bin\szcs.dll
-F:\数字城市\城市合集\rhly\bin\szcs.pdb
-F:\数字城市\城市合集\rhly\obj\Debug\ResolveAssemblyReference.cache
-F:\数字城市\城市合集\rhly\obj\Debug\szcs.dll
-F:\数字城市\城市合集\rhly\obj\Debug\szcs.pdb
